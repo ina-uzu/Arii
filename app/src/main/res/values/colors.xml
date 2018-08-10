@@ -7,4 +7,7 @@
     <color name="border">#dddddd</color>
     <color name="background">#ffffff</color>
     <color name="normal_text">#686565</color>
+    <color name="holo_light_primary_dark">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="bright_foreground_holo_light">#ffffff</color>
 </resources>

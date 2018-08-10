@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AriiTheme" parent="AppTheme">
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:colorForeground">@color/bright_foreground_holo_light</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+    </style>
+</resources>
