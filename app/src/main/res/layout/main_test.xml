@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="@drawable/box"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:hint="@string/search_hint"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_search" />
+
+        <ImageButton
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:background="@color/background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bt_search"
+            app:layout_constraintLeft_toRightOf="@+id/et_search"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_margin="20sp"
+        android:background="#ffeeee"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search"></LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20sp"
+        android:text="오늘의 소식"
+        android:textColor="@color/normal_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rv_body"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id='@+id/rv_body'
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginHorizontal="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_bottom"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginHorizontal="20sp"
+        android:background="#eeffdd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_body"
+        app:layout_constraintVertical_bias="0">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

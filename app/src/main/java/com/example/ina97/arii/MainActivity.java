@@ -13,8 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
-import java.util.TooManyListenersException;
 
 public class MainActivity extends Activity {
 
@@ -25,7 +23,7 @@ public class MainActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.main_test);
 
         list_news = new ArrayList<>();
 
@@ -60,14 +58,14 @@ public class MainActivity extends Activity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull NewsHolder newsHolder, int i) {
+        public void onBindViewHolder(@NonNull NewsHolder newsHolder, final int i) {
             newsHolder.tv_title.setText(mlist.get(i).title);
             newsHolder.tv_cont.setText(mlist.get(i).cont);
 
             newsHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), "touch!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), mlist.get(i).cont, Toast.LENGTH_LONG).show();
                 }
             });
         }
