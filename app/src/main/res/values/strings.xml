@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Arii</string>
+    <string name="search_hint">동아리를 이름이나 키워드로 검색해보세요!</string>
+
+
+    <string name="club_news_title">Release World</string>
 </resources>
