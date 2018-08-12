@@ -49,12 +49,13 @@ public class MainActivity extends Activity {
         list_clubs = new ArrayList<>();
 
         //test2
-        list_clubs.add(new Item_myclub("release"));
-        list_clubs.add(new Item_myclub("solgit"));
-        list_clubs.add(new Item_myclub("InaJJang"));
-        list_clubs.add(new Item_myclub("ina"));
-        list_clubs.add(new Item_myclub("song"));
-        list_clubs.add(new Item_myclub("Arii"));
+        list_clubs.add(new Item_myclub("release", R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("solgit", R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("InaJJang",R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("release", R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("solgit", R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("InaJJang",R.drawable.ic_launcher_foreground));
+        list_clubs.add(new Item_myclub("Arii",R.drawable.add_bt));
 
         recyclerViewBottom= findViewById(R.id.rv_bottom);
         clubsLayoutManager = new LinearLayoutManager(this);

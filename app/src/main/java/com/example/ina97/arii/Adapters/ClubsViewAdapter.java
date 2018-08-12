@@ -1,7 +1,6 @@
 package com.example.ina97.arii.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
@@ -11,9 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ina97.arii.Club.ClubMainActivity;
 import com.example.ina97.arii.Items.Item_myclub;
-import com.example.ina97.arii.Main.MainActivity;
 import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
@@ -37,7 +34,7 @@ public class ClubsViewAdapter extends RecyclerView.Adapter<ClubsHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ClubsHolder clubsHolder, int i) {
-        clubsHolder.logo.setImageResource(R.drawable.release_logo);
+        clubsHolder.logo.setImageResource(mlist.get(i).getImgId());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             clubsHolder.logo.setBackground(new ShapeDrawable(new OvalShape()));
