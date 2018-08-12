@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="20sp"
-    tools:layout_editor_absoluteX="20dp"
-    tools:layout_editor_absoluteY="81dp">
+    android:layout_marginHorizontal="20sp">
 
 
     <ImageView
@@ -27,7 +25,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="494dp"
-        android:layout_height="49dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
@@ -36,9 +34,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/cont"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toRightOf="@+id/logo"
+        app:layout_constraintLeft_toRightOf="@+id/club_logo"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintStart_toEndOf="@+id/club_logo"
         app:layout_constraintTop_toBottomOf="@+id/image"
         tools:text="@android:string/untitled" />
 
@@ -46,19 +44,20 @@
         android:id="@+id/cont"
         android:layout_width="0sp"
         android:layout_height="170dp"
+        android:layout_marginTop="12dp"
         android:text="@string/app_name"
         android:textSize="15sp"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/club_logo" />
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/club_logo"
         android:layout_width="50sp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="584dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginVertical="10sp"
         android:scaleType="fitCenter"
         android:src="@drawable/release_logo"

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="5"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70sp">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0sp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/date"
+            android:text="6.6"
+            android:textSize="20sp"
+            android:textColor="@color/normal_text"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:background="@drawable/box">
+
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center_vertical"
+            android:text="Release Day"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0sp" />
+
+        <TextView
+            android:id="@+id/cont"
+            android:gravity="center_vertical"
+            android:textColor="@color/normal_text"
+            android:text="이런저런 설명이 있는 부분이구요"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

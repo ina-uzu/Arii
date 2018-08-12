@@ -7,9 +7,9 @@ import android.widget.ImageView;
 
 import com.example.ina97.arii.R;
 
-class ClubsHolder extends RecyclerView.ViewHolder {
+class BottomHolder extends RecyclerView.ViewHolder {
     protected ImageView logo;
-    public ClubsHolder(@NonNull View itemView) {
+    public BottomHolder(@NonNull View itemView) {
         super(itemView);
         logo = itemView.findViewById(R.id.logo);
     }

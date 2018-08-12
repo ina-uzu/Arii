@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 
-import com.example.ina97.arii.Adapters.ClubsViewAdapter;
+import com.example.ina97.arii.Adapters.BottomViewAdapter;
 import com.example.ina97.arii.Adapters.NewsViewAdapter;
 import com.example.ina97.arii.Items.Item_club_news;
 import com.example.ina97.arii.Items.Item_myclub;
@@ -17,7 +18,7 @@ public class MainActivity extends Activity {
 
     LinearLayoutManager newsLayoutManager, clubsLayoutManager;
     NewsViewAdapter newsViewAdapter;
-    ClubsViewAdapter clubsViewAdapter;
+    BottomViewAdapter bottomViewAdapter;
     RecyclerView recyclerViewBody, recyclerViewBottom;
     ArrayList <Item_club_news> list_news;
     ArrayList <Item_myclub> list_clubs;
@@ -60,10 +61,10 @@ public class MainActivity extends Activity {
         recyclerViewBottom= findViewById(R.id.rv_bottom);
         clubsLayoutManager = new LinearLayoutManager(this);
         clubsLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        clubsViewAdapter = new ClubsViewAdapter(list_clubs);
+        bottomViewAdapter = new BottomViewAdapter(list_clubs);
 
         recyclerViewBottom.setLayoutManager(clubsLayoutManager);
-        recyclerViewBottom.setAdapter(clubsViewAdapter);
+        recyclerViewBottom.setAdapter(bottomViewAdapter);
     }
 
 }

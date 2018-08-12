@@ -21,6 +21,7 @@ public class LoginActivity extends BaseActivity {
         bt_prev=findViewById(R.id.bt_prev);
 
         bt_prev.setText("ClubMain");
+        bt_next.setText("Main");
         bt_prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

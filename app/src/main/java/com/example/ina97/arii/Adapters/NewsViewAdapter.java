@@ -1,7 +1,13 @@
 package com.example.ina97.arii.Adapters;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ScaleDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,10 +35,16 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
         return holder;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull NewsHolder newsHolder, final int i) {
         newsHolder.tv_title.setText(mlist.get(i).getTitle());
         newsHolder.tv_cont.setText(mlist.get(i).getCont());
+
+        newsHolder.img_logo.setBackground(new ShapeDrawable(new OvalShape()));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            newsHolder.img_logo.setClipToOutline(true);
+        }
     }
 
     @Override

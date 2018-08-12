@@ -15,29 +15,29 @@ import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
 
-public class ClubsViewAdapter extends RecyclerView.Adapter<ClubsHolder> {
+public class BottomViewAdapter extends RecyclerView.Adapter<BottomHolder> {
     private ArrayList<Item_myclub> mlist;
     Context mContext;
 
-    public ClubsViewAdapter(ArrayList<Item_myclub> list){
+    public BottomViewAdapter(ArrayList<Item_myclub> list){
         this.mlist = list;
     }
 
     @NonNull
     @Override
-    public ClubsHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public BottomHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_myclub, viewGroup,false);
         mContext=viewGroup.getContext();
-        ClubsHolder holder = new ClubsHolder(v);
+        BottomHolder holder = new BottomHolder(v);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ClubsHolder clubsHolder, int i) {
-        clubsHolder.logo.setImageResource(mlist.get(i).getImgId());
+    public void onBindViewHolder(@NonNull BottomHolder bottomHolder, int i) {
+        bottomHolder.logo.setImageResource(mlist.get(i).getImgId());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            clubsHolder.logo.setBackground(new ShapeDrawable(new OvalShape()));
+            bottomHolder.logo.setBackground(new ShapeDrawable(new OvalShape()));
         }
 
     }
