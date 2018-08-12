@@ -1,20 +1,23 @@
 package com.example.ina97.arii.Main;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.example.ina97.arii.Adapters.BottomViewAdapter;
 import com.example.ina97.arii.Adapters.NewsViewAdapter;
+import com.example.ina97.arii.BaseActivity;
 import com.example.ina97.arii.Items.Item_club_news;
 import com.example.ina97.arii.Items.Item_myclub;
 import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity{
 
     LinearLayoutManager newsLayoutManager, clubsLayoutManager;
     NewsViewAdapter newsViewAdapter;
@@ -25,12 +28,26 @@ public class MainActivity extends Activity {
 ;
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.main);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode( ActionBar.NAVIGATION_MODE_TABS );
+
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);			//액션바 아이콘을 업 네비게이션 형태로 표시합니다.
+        actionBar.setDisplayShowTitleEnabled(false);		//액션바에 표시되는 제목의 표시유무를 설정합니다.
+        actionBar.setDisplayShowHomeEnabled(false);			//홈 아이콘을 숨김처리합니다.
+
+        View mCustomView = LayoutInflater.from(this).inflate(R.layout.actionbar, null);
+        actionBar.setCustomView(mCustomView);
 
         setBodyView();
         setBottomView();
 
     }
+
+
     public void setBodyView(){
         list_news = new ArrayList<>();
         //test
