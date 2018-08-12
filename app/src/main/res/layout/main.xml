@@ -8,34 +8,41 @@
     tools:context=".TestActivity"
     tools:layout_editor_absoluteY="73dp">
 
-    <EditText
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_margin="40sp"
+        android:background="@drawable/box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
         android:id="@+id/et_search"
-        android:layout_width="304dp"
-        android:layout_height="43dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        app:layout_constrainedWidth="true"
+        android:layout_height="50sp"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tag"
+        app:layout_constraintRight_toLeftOf="@+id/bt_search"
         android:ems="10"
         android:hint="@string/search_hint"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+        <ImageButton
         android:id="@+id/bt_search"
         android:layout_width="30dp"
-        android:layout_height="34dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:background="#ffffff"
-        android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/bt_search"
         app:layout_constraintBottom_toBottomOf="@+id/et_search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintRight_toLeftOf="@+id/et_search"
         app:layout_constraintStart_toEndOf="@+id/et_search" />
+        </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -47,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_search">
+        app:layout_constraintTop_toBottomOf="@+id/Title">
 
         <TextView
             android:id="@+id/text"

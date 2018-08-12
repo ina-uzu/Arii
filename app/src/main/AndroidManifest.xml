@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".Main.LoginActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Main.MainActivity"/>
+        <activity android:name=".Main.MainSearchActivity"/>
+        <activity android:name=".Main.SignUpActivity"/>
+        <activity android:name=".Club.ClubHistoryActivity"/>
+        <activity android:name=".Club.ClubListActivity"/>
+        <activity android:name=".Club.ClubMainActivity"/>
+        <activity android:name=".Club.ClubMemberActiivty"/>
+        <activity android:name=".Club.ClubNewActivity"/>
+        <activity android:name=".Club.ClubScheduleActivity"/>
+        <activity android:name=".Mypage.MypageActivity"/>
+        <activity android:name=".SplashActivity"/>
+
     </application>
 
 </manifest>

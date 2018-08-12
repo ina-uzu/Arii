@@ -1,4 +1,4 @@
-package com.example.ina97.arii;
+package com.example.ina97.arii.Main;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.ina97.arii.Items.Item_club_news;
+import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
 
@@ -28,8 +31,8 @@ public class MainActivity extends Activity {
         list_news = new ArrayList<>();
 
         //test
-        list_news.add(new Item_club_news("Release 학회원 모집!", "정말 좋다! 너무 너무 릴리즈 우주 짱짱" ));
-        list_news.add(new Item_club_news("솔깃 공연 한다!", "궁금하다 가고싶다 룰루 멋져" ));
+        list_news.add(new Item_club_news("Release 학회원 모집!", "정말 좋다! 너무 너무 릴리즈 우주 짱짱\n난 이미 릴리즈! 펭귄이 까매" ));
+        list_news.add(new Item_club_news("솔깃 공연 한다!", "궁금하다 가고싶다 룰루 멋져\n난 이미 솔깃!!" ));
 
         recyclerViewBody = findViewById(R.id.rv_body);
         newsLayoutManager = new LinearLayoutManager(this);
@@ -59,13 +62,13 @@ public class MainActivity extends Activity {
 
         @Override
         public void onBindViewHolder(@NonNull NewsHolder newsHolder, final int i) {
-            newsHolder.tv_title.setText(mlist.get(i).title);
-            newsHolder.tv_cont.setText(mlist.get(i).cont);
+            newsHolder.tv_title.setText(mlist.get(i).getTitle());
+            newsHolder.tv_cont.setText(mlist.get(i).getCont());
 
             newsHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), mlist.get(i).cont, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), mlist.get(i).getCont(), Toast.LENGTH_LONG).show();
                 }
             });
         }
