@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.ina97.arii.BaseActivity;
+import com.example.ina97.arii.Club.ClubMainActivity;
 import com.example.ina97.arii.R;
 
 public class LoginActivity extends BaseActivity {
@@ -19,11 +20,11 @@ public class LoginActivity extends BaseActivity {
         bt_next= findViewById(R.id.bt_next);
         bt_prev=findViewById(R.id.bt_prev);
 
-        bt_prev.setText("Join");
+        bt_prev.setText("ClubMain");
         bt_prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ClubMainActivity.class);
                 startActivity(intent);
             }
         });

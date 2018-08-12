@@ -7,6 +7,7 @@
         android:width="5dp"
         android:color="@color/border" >
     </stroke>
+
     <solid
         android:color="@color/white"/>
 

@@ -17,7 +17,11 @@ public class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
     }
 
-    public void setButtons(int LayoutID, Context context){
+    public void setBottomView(){
+
+    }
+
+    public void setBodyView(){
 
     }
     public void onClickPrev(View view){

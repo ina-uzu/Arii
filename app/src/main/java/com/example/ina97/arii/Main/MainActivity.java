@@ -21,10 +21,10 @@ public class MainActivity extends Activity {
     RecyclerView recyclerViewBody, recyclerViewBottom;
     ArrayList <Item_club_news> list_news;
     ArrayList <Item_myclub> list_clubs;
-
+;
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_test);
+        setContentView(R.layout.main);
 
         setBodyView();
         setBottomView();

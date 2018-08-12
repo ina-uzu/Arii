@@ -5,25 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="0sp"
+        android:layout_height="180sp"
+        android:src="@drawable/release_s"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/title"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/title"
+        android:orientation="vertical"
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:layout_margin="10sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv">
+        
+        <ImageView
+            android:id="@+id/club_logo"
+            android:background="@drawable/square_round"
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:src="@drawable/release_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/club_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        
+        <TextView
+            android:id="@+id/club_name"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Release"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/club_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/club_cont"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/club_cont"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="서강대학교 컴퓨터공학과"
+            android:textColor="@color/normal_text"
+            android:layout_marginHorizontal="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/club_logo"
+            app:layout_constraintTop_toBottomOf="@+id/club_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
     <TextView
         android:id="@+id/tv"
+        android:layout_width="0sp"
+        android:layout_height="40sp"
+        android:text="다가오는 일정"
+        android:layout_marginHorizontal="10sp"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textColor="@color/normal_text"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rv_body"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id='@+id/rv_body'
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"/>
+        android:layout_height="0sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@+id/rv_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv">
 
-    <Button
-        android:id="@+id/bt_prev"
-        android:text="Prev"
-        app:layout_constraintTop_toBottomOf="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    </android.support.v7.widget.RecyclerView>
 
 
-    <Button
-        android:id="@+id/bt_next"
-        android:text="Next"
-        app:layout_constraintTop_toBottomOf="@+id/bt_prev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_bottom"
+        android:background="@drawable/center_line"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_body"
+        app:layout_constraintVertical_bias="0">
+
+    </android.support.v7.widget.RecyclerView>
+
 
 </android.support.constraint.ConstraintLayout>
