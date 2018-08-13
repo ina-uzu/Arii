@@ -17,10 +17,8 @@
         android:src="@drawable/release_s"
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
@@ -39,6 +37,7 @@
         app:layout_constraintStart_toEndOf="@+id/club_logo"
         app:layout_constraintTop_toBottomOf="@+id/image"
         tools:text="@android:string/untitled" />
+
 
     <TextView
         android:id="@+id/cont"
