@@ -10,7 +10,7 @@
         android:id="@+id/main_img"
         android:layout_width="0sp"
         android:layout_height="180sp"
-        android:src="@drawable/release_s"
+        android:src="@drawable/release_main"
         android:scaleType="centerCrop"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
