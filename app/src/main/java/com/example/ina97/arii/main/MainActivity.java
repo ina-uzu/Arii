@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity{
         list_news.add(new ItemClubNews("Release 학회원 모집!", "정말 좋다! 너무 너무 릴리즈 우주 짱짱\n난 이미 릴리즈! 펭귄이 까매" ));
         list_news.add(new ItemClubNews("솔깃 공연 한다!", "궁금하다 가고싶다 룰루 멋져\n난 이미 솔깃!!" ));
 
-        recyclerViewBody = findViewById(R.id.rv_body);
+        recyclerViewBody = findViewById(R.id.rv_club_member);
         newsLayoutManager = new LinearLayoutManager(this);
         newsLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         newsViewAdapter = new NewsViewAdapter(list_news);

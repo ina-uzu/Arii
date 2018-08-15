@@ -7,9 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.ina97.arii.BaseActivity;;
+import com.example.ina97.arii.BaseActivity;
 import com.example.ina97.arii.R;
-import com.example.ina97.arii.club.ClubMainActivity;
+;
 
 public class LoginActivity extends BaseActivity {
     TextView tv_title, tv_findPassword, tv_join;
@@ -18,7 +18,7 @@ public class LoginActivity extends BaseActivity {
 
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_login);
+        setContentView(R.layout.login);
 
 
         tv_title = findViewById(R.id.tv_title);

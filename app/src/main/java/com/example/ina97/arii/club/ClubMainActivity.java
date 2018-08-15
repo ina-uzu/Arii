@@ -54,7 +54,7 @@ public class ClubMainActivity extends BaseActivity {
         list_body.add(new ItemClubBody("8.19", "인아 할아버지랑 밥","고기를 먹어야지!"));
         list_body.add(new ItemClubBody("8.27", "강릉여행","오호로 신난당!!"));
 
-        recyclerViewBody = findViewById(R.id.rv_body);
+        recyclerViewBody = findViewById(R.id.rv_club_member);
         clubBodyLayoutManager= new LinearLayoutManager(this);
         clubBodyLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         clubBodyAdapter = new ClubBodyAdapter(list_body);

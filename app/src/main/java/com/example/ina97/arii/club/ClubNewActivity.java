@@ -2,7 +2,9 @@ package com.example.ina97.arii.club;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ina97.arii.BaseActivity;
@@ -10,29 +12,14 @@ import com.example.ina97.arii.R;
 import com.example.ina97.arii.main.MainActivity;
 
 public class ClubNewActivity extends BaseActivity {
+    RecyclerView rv_body;
+    Button bt_join;
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.club_new);
-        TextView tv = findViewById(R.id.tv);
-        tv.setText("ClubJoinPage");
-        bt_next= findViewById(R.id.bt_next);
-        bt_prev = findViewById(R.id.bt_prev);
 
-        bt_prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ClubNewActivity.this, ClubMainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        bt_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ClubNewActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        rv_body = findViewById(R.id.rv_body);
+        bt_join = findViewById(R.id.bt_join);
     }
 
 

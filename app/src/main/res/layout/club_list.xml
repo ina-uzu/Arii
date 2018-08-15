@@ -5,23 +5,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/tv"
+        android:text="CLUB LIST"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"/>
 
-    <Button
-        android:id="@+id/bt_prev"
-        android:text="Prev"
-        app:layout_constraintTop_toBottomOf="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_club_list"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
+    </android.support.v7.widget.RecyclerView>
 
-    <Button
-        android:id="@+id/bt_next"
-        android:text="Next"
-        app:layout_constraintTop_toBottomOf="@+id/bt_prev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>

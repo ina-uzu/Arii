@@ -88,13 +88,13 @@
         android:textColor="@color/normal_text"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rv_body"
+        app:layout_constraintBottom_toTopOf="@+id/rv_club_member"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tag" />
 
     <android.support.v7.widget.RecyclerView
-        android:id='@+id/rv_body'
+        android:id="@+id/rv_club_member"
         android:layout_width="match_parent"
         android:layout_height="0sp"
         app:layout_constraintBottom_toTopOf="@+id/rv_bottom"
@@ -113,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_body"
+        app:layout_constraintTop_toBottomOf="@+id/rv_club_member"
         app:layout_constraintVertical_bias="0">
 
     </android.support.v7.widget.RecyclerView>
