@@ -12,13 +12,11 @@ import com.example.ina97.arii.R;
 import com.example.ina97.arii.main.MainActivity;
 
 public class ClubNewActivity extends BaseActivity {
-    RecyclerView rv_body;
     Button bt_join;
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.club_new);
 
-        rv_body = findViewById(R.id.rv_body);
         bt_join = findViewById(R.id.bt_join);
     }
 

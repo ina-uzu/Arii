@@ -10,6 +10,7 @@ import com.example.ina97.arii.Items.ItemMyclub;
 import com.example.ina97.arii.R;
 import com.example.ina97.arii.adapters.BottomViewAdapter;
 import com.example.ina97.arii.adapters.NewsViewAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 

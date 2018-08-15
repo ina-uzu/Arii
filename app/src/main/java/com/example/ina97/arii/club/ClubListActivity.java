@@ -22,8 +22,8 @@ public class ClubListActivity extends BaseActivity{
 
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);setContentView(R.layout.main_search);
-
         setContentView(R.layout.club_list);
+
         tv_title = findViewById(R.id.tv_title);
         rv_club_list =findViewById(R.id.rv_club_list);
 

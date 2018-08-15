@@ -10,21 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="동아리 가입"
-        app:layout_constraintBottom_toTopOf="@+id/rv_body"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_body"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintBottom_toTopmOf="@+id/bt_join">
-
-    </android.support.v7.widget.RecyclerView>
 
     <Button
         android:id="@+id/bt_join"
@@ -34,5 +23,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_body" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 </android.support.constraint.ConstraintLayout>

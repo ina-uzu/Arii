@@ -15,7 +15,7 @@ public class ClubMemberActiivty extends BaseActivity {
 
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.club_member);
         rv_member = findViewById(R.id.rv_club_member);
     }
 

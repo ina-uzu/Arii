@@ -16,7 +16,7 @@ public class SignUpActivity extends BaseActivity {
 
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.main_join);
 
         et_id= findViewById(R.id.et_id);
         et_email = findViewById(R.id.et_email);
