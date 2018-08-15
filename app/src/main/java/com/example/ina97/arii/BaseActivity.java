@@ -1,5 +1,6 @@
 package com.example.ina97.arii;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,10 @@ public class BaseActivity extends Activity{
     public void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getActionBar();
+
+        actionBar.hide();
+
 
     /*    View decorView = getWindow().getDecorView();
 
