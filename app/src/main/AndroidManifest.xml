@@ -24,7 +24,7 @@
         <activity android:name=".club.ClubHistoryActivity"/>
         <activity android:name=".club.ClubListActivity"/>
         <activity android:name=".club.ClubMainActivity"/>
-        <activity android:name=".club.ClubMemberActiivty"/>
+        <activity android:name=".club.ClubMemberActivty"/>
         <activity android:name=".club.ClubNewActivity"/>
         <activity android:name=".club.ClubScheduleActivity"/>
         <activity android:name=".mypage.MypageActivity"/>

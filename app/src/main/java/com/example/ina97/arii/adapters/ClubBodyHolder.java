@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.example.ina97.arii.R;
 
 public class ClubBodyHolder extends RecyclerView.ViewHolder {
-
     TextView date,title,cont;
     public ClubBodyHolder(@NonNull View itemView) {
         super(itemView);

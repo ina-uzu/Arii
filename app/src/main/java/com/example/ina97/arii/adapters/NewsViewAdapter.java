@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.ina97.arii.Items.ItemClubNews;
 import com.example.ina97.arii.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,9 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
     public void onBindViewHolder(@NonNull NewsHolder newsHolder, final int i) {
         newsHolder.tv_title.setText(mlist.get(i).getTitle());
         newsHolder.tv_cont.setText(mlist.get(i).getCont());
+
+        Picasso.with(mContext).load(R.drawable.release_logo).error(R.mipmap.ic_launcher_round).into(newsHolder.img_logo);
+        Picasso.with(mContext).load(R.drawable.release_s).error(R.mipmap.ic_launcher_round).into(newsHolder.img_main);
 
         newsHolder.img_logo.setBackground(new ShapeDrawable(new OvalShape()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

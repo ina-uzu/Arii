@@ -18,5 +18,6 @@ class NewsHolder extends RecyclerView.ViewHolder {
         tv_title  = itemView.findViewById(R.id.title);
         tv_cont = itemView.findViewById(R.id.cont);
         img_logo=itemView.findViewById(R.id.club_logo);
+        img_main=itemView.findViewById(R.id.image);
     }
 }

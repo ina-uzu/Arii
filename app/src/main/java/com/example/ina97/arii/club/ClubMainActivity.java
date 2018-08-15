@@ -12,6 +12,7 @@ import com.example.ina97.arii.BaseActivity;
 import com.example.ina97.arii.Items.ItemClubBody;
 import com.example.ina97.arii.Items.ItemMyclub;
 import com.example.ina97.arii.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -26,10 +27,13 @@ public class ClubMainActivity extends BaseActivity {
     ArrayList<ItemClubBody> list_body;
 
     ImageView club_logo;
-
+    ImageView main_img;
     public  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.club_main);
+
+        main_img = findViewById(R.id.main_img);
+        Picasso.with(this).load(R.drawable.release_main).into(main_img);
 
         setBodyView();
         setBottomView();
@@ -41,6 +45,7 @@ public class ClubMainActivity extends BaseActivity {
             club_logo.setBackground(drawable);
             club_logo.setClipToOutline(true);
         }
+        Picasso.with(this).load(R.drawable.release_logo).into(club_logo);
 
 
     }

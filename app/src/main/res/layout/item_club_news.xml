@@ -14,7 +14,6 @@
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:src="@drawable/release_s"
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +58,6 @@
         android:layout_marginBottom="32dp"
         android:layout_marginVertical="10sp"
         android:scaleType="fitCenter"
-        android:src="@drawable/release_logo"
         app:layout_constraintBottom_toTopOf="@+id/cont"
         app:layout_constraintStart_toStartOf="parent" />
 

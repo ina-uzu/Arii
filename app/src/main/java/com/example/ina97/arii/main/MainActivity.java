@@ -1,15 +1,20 @@
 package com.example.ina97.arii.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.ina97.arii.BaseActivity;
 import com.example.ina97.arii.Items.ItemClubNews;
 import com.example.ina97.arii.Items.ItemMyclub;
 import com.example.ina97.arii.R;
+import com.example.ina97.arii.RecyclerItemClickListener;
 import com.example.ina97.arii.adapters.BottomViewAdapter;
 import com.example.ina97.arii.adapters.NewsViewAdapter;
+import com.example.ina97.arii.club.ClubMainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -29,6 +34,21 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.main);
         setBodyView();
         setBottomView();
+
+        recyclerViewBody.addOnItemTouchListener(new RecyclerItemClickListener(
+                getApplicationContext(), recyclerViewBody, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, ClubMainActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+                Toast.makeText(getApplicationContext(), "long click", Toast.LENGTH_LONG).show();
+            }
+        }));
 
     }
 
