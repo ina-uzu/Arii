@@ -1,11 +1,11 @@
 package com.example.ina97.arii.Items;
 
-public class Item_club_body {
+public class ItemClubBody {
     private String title;
     private String cont;
     private String date;
 
-    public Item_club_body(String date, String title, String cont){
+    public ItemClubBody(String date, String title, String cont){
         this.date=date;
         this.title=title;
         this.cont=cont;

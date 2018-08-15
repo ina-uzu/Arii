@@ -1,4 +1,4 @@
-package com.example.ina97.arii.Adapters;
+package com.example.ina97.arii.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.ShapeDrawable;
@@ -10,16 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ina97.arii.Items.Item_myclub;
+import com.example.ina97.arii.Items.ItemMyclub;
 import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
 
 public class BottomViewAdapter extends RecyclerView.Adapter<BottomHolder> {
-    private ArrayList<Item_myclub> mlist;
+    private ArrayList<ItemMyclub> mlist;
     Context mContext;
 
-    public BottomViewAdapter(ArrayList<Item_myclub> list){
+    public BottomViewAdapter(ArrayList<ItemMyclub> list){
         this.mlist = list;
     }
 

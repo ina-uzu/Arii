@@ -1,4 +1,4 @@
-package com.example.ina97.arii.Mypage;
+package com.example.ina97.arii.mypage;
 
 import android.os.Bundle;
 

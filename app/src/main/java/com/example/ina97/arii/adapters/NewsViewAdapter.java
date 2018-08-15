@@ -1,8 +1,6 @@
-package com.example.ina97.arii.Adapters;
+package com.example.ina97.arii.adapters;
 
 import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ScaleDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
@@ -13,16 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ina97.arii.Items.Item_club_news;
+import com.example.ina97.arii.Items.ItemClubNews;
 import com.example.ina97.arii.R;
 
 import java.util.ArrayList;
 
 public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
-    private ArrayList<Item_club_news> mlist;
+    private ArrayList<ItemClubNews> mlist;
     Context mContext;
 
-    public NewsViewAdapter(ArrayList<Item_club_news> list){
+    public NewsViewAdapter(ArrayList<ItemClubNews> list){
         this.mlist=list;
     }
 

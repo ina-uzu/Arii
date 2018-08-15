@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.LoginActivity"
+        <activity android:name=".main.LoginActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,16 +18,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main.MainActivity"/>
-        <activity android:name=".Main.MainSearchActivity"/>
-        <activity android:name=".Main.SignUpActivity"/>
-        <activity android:name=".Club.ClubHistoryActivity"/>
-        <activity android:name=".Club.ClubListActivity"/>
-        <activity android:name=".Club.ClubMainActivity"/>
-        <activity android:name=".Club.ClubMemberActiivty"/>
-        <activity android:name=".Club.ClubNewActivity"/>
-        <activity android:name=".Club.ClubScheduleActivity"/>
-        <activity android:name=".Mypage.MypageActivity"/>
+        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".main.MainSearchActivity"/>
+        <activity android:name=".main.SignUpActivity"/>
+        <activity android:name=".club.ClubHistoryActivity"/>
+        <activity android:name=".club.ClubListActivity"/>
+        <activity android:name=".club.ClubMainActivity"/>
+        <activity android:name=".club.ClubMemberActiivty"/>
+        <activity android:name=".club.ClubNewActivity"/>
+        <activity android:name=".club.ClubScheduleActivity"/>
+        <activity android:name=".mypage.MypageActivity"/>
         <activity android:name=".SplashActivity"/>
 
     </application>
