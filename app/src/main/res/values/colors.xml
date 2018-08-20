@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#ffffff</color>
 
+    <color name="mainColor">#fe7421</color>
+
     <color name="border">#dddddd</color>
     <color name="background">#ffffff</color>
     <color name="normal_text">#686565</color>

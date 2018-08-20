@@ -4,9 +4,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
+
+    <!--android:src="@drawable/release"-->
     <ImageView
         android:id="@+id/logo"
-        android:src="@drawable/release"
         android:backgroundTint="@color/border"
         android:background="@drawable/round"
         android:layout_marginHorizontal="10sp"

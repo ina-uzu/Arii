@@ -22,8 +22,7 @@ public class LoginActivity extends BaseActivity {
 
 
         tv_title = findViewById(R.id.tv_title);
-        tv_join = findViewById(R.id.join);
-        tv_findPassword = findViewById(R.id.findPassword);
+ //       tv_join = findViewById(R.id.bt_join);
         et_id = findViewById(R.id.et_id);
         et_password = findViewById(R.id.et_password);
         bt_login = findViewById(R.id.bt_login);
@@ -32,21 +31,14 @@ public class LoginActivity extends BaseActivity {
         String password = et_password.getText().toString();
 
 
-        tv_findPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        tv_join.setOnClickListener(new View.OnClickListener() {
+/*        tv_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
             }
         });
-
+*/
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

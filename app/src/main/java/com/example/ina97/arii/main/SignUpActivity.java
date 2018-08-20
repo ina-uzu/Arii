@@ -21,7 +21,6 @@ public class SignUpActivity extends BaseActivity {
         et_id= findViewById(R.id.et_id);
         et_email = findViewById(R.id.et_email);
         et_password= findViewById(R.id.et_password);
-        et_univ = findViewById(R.id.et_univ);
         bt_join = findViewById(R.id.bt_join);
 
 

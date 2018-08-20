@@ -40,8 +40,8 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
         newsHolder.tv_title.setText(mlist.get(i).getTitle());
         newsHolder.tv_cont.setText(mlist.get(i).getCont());
 
-        Picasso.with(mContext).load(R.drawable.release_logo).error(R.mipmap.ic_launcher_round).into(newsHolder.img_logo);
-        Picasso.with(mContext).load(R.drawable.release_s).error(R.mipmap.ic_launcher_round).into(newsHolder.img_main);
+        Picasso.with(mContext).load(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher_round).into(newsHolder.img_logo);
+        Picasso.with(mContext).load(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher_round).into(newsHolder.img_main);
 
         newsHolder.img_logo.setBackground(new ShapeDrawable(new OvalShape()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

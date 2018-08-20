@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.ina97.arii.Items.ItemMyclub;
 import com.example.ina97.arii.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,9 @@ public class BottomViewAdapter extends RecyclerView.Adapter<BottomHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull BottomHolder bottomHolder, int i) {
-        bottomHolder.logo.setImageResource(mlist.get(i).getImgId());
+        //bottomHolder.logo.setImageResource(mlist.get(i).getImgId());
+
+        Picasso.with(mContext).load(mlist.get(i).getImgId()).into(bottomHolder.logo);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             bottomHolder.logo.setBackground(new ShapeDrawable(new OvalShape()));
