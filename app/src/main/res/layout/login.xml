@@ -48,17 +48,42 @@
             android:inputType="textPassword"
             android:paddingVertical="20dp" />
 
-        <Button
-            android:id="@+id/bt_login"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginVertical="25dp"
-            android:background="@drawable/button_box"
-            android:text="로그인"
-            android:textColor="@color/mainColor"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_normal"
+                android:backgroundTint="@color/mainColor"
+                android:text="로그인"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt_join"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/effect"
+                android:text="회원가입"
+                android:textColor="@drawable/effect_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
 
