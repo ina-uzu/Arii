@@ -1,5 +1,6 @@
 package com.example.ina97.arii.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
@@ -16,6 +17,8 @@ import com.example.ina97.arii.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import static com.example.ina97.arii.R.color.mainColor;
 
 public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
     private ArrayList<ItemClubNews> mlist;
@@ -39,10 +42,10 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsHolder> {
     public void onBindViewHolder(@NonNull NewsHolder newsHolder, final int i) {
         newsHolder.tv_title.setText(mlist.get(i).getTitle());
         newsHolder.tv_cont.setText(mlist.get(i).getCont());
-
+/*
         Picasso.with(mContext).load(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher_round).into(newsHolder.img_logo);
         Picasso.with(mContext).load(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher_round).into(newsHolder.img_main);
-
+*/
         newsHolder.img_logo.setBackground(new ShapeDrawable(new OvalShape()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             newsHolder.img_logo.setClipToOutline(true);

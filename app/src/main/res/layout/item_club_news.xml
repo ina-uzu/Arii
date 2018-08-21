@@ -3,61 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginHorizontal="20sp">
+    android:layout_height="wrap_content">
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/list"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="0sp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="15dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0sp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/border"
+            app:layout_constraintBottom_toTopOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0sp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/cont"
+            app:layout_constraintLeft_toRightOf="@+id/club_logo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:text="@android:string/untitled" />
+
+        <TextView
+            android:id="@+id/cont"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/club_logo" />
+
+        <ImageView
+            android:id="@+id/club_logo"
+            android:layout_width="50sp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/cont"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    </android.support.constraint.ConstraintLayout>
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="494dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:gravity="center_vertical"
-        android:text="@string/app_name"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/cont"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toRightOf="@+id/club_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/club_logo"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        tools:text="@android:string/untitled" />
-
-
-    <TextView
-        android:id="@+id/cont"
-        android:layout_width="0sp"
-        android:layout_height="170dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/app_name"
-        android:textSize="15sp"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/club_logo" />
-
-    <ImageView
-        android:id="@+id/club_logo"
-        android:layout_width="50sp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginVertical="10sp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/cont"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list"/>
 </android.support.constraint.ConstraintLayout>
