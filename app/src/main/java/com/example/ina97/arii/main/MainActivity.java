@@ -2,9 +2,12 @@ package com.example.ina97.arii.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.ina97.arii.BaseActivity;
@@ -18,7 +21,7 @@ import com.example.ina97.arii.club.ClubMainActivity;
 
 import java.util.ArrayList;
 
-public class MainActivity extends BaseActivity{
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     LinearLayoutManager newsLayoutManager, clubsLayoutManager;
     NewsViewAdapter newsViewAdapter;
@@ -26,13 +29,34 @@ public class MainActivity extends BaseActivity{
     RecyclerView recyclerViewBody, recyclerViewBottom;
     ArrayList <ItemClubNews> list_news;
     ArrayList <ItemMyclub> list_clubs;
-;
+
+    //FAB
+    Animation fab_open, fab_close;
+    FloatingActionButton fab, fab2, fab3;
+    Boolean openFlag = false;
+
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main);
         setBodyView();
         //setBottomView();
+
+        fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        fab_close = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fab_close);
+        fab = findViewById(R.id.fab);
+        fab2 = findViewById(R.id.fab2);
+        fab3 = findViewById(R.id.fab3);
+
+        //버튼 상태 초기화(닫혀있어라!)
+        fab2.startAnimation(fab_close);
+        fab3.startAnimation(fab_close);
+        fab2.setClickable(false);
+        fab3.setClickable(false);
+
+        fab.setOnClickListener(this);
+        fab2.setOnClickListener(this);
+        fab3.setOnClickListener(this);
 
         recyclerViewBody.addOnItemTouchListener(new RecyclerItemClickListener(
                 getApplicationContext(), recyclerViewBody, new RecyclerItemClickListener.OnItemClickListener() {
@@ -51,11 +75,47 @@ public class MainActivity extends BaseActivity{
 
     }
 
+    public void anim() {
 
+        if (openFlag) {
+            fab2.startAnimation(fab_close);
+            fab3.startAnimation(fab_close);
+            fab2.setClickable(false);
+            fab3.setClickable(false);
+            openFlag = false;
+        } else {
+            fab2.startAnimation(fab_open);
+            fab3.startAnimation(fab_open);
+            fab2.setClickable(true);
+            fab3.setClickable(true);
+            openFlag = true;
+        }
+    }
+
+    @Override
+    public void onClick(View v){
+        int id = v.getId();
+
+        switch (id) {
+            case R.id.fab:
+                anim();
+                break;
+            case R.id.fab2:
+                anim();
+                Toast.makeText(this, "노랑이", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.fab3:
+                anim();
+                Toast.makeText(this, "파랑이", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+
+    }
     public void setBodyView(){
         list_news = new ArrayList<>();
         //test
-        list_news.add(new ItemClubNews("Release 학회원 모집!", "정말 좋다! 너무 너무 릴리즈 우주 짱짱\n난 이미 릴리즈! 펭귄이 까매" ));
+        list_news.add(new ItemClubNews("인아 팬클럽 회원 모집!", "정말 좋다! 너무 너무 인아 우주 짱짱\n난 이미 인아팬! 행복하세요 모두들!" ));
         list_news.add(new ItemClubNews("솔깃 공연 한다!", "궁금하다 가고싶다 룰루 멋져\n난 이미 솔깃!!" ));
 
         recyclerViewBody = findViewById(R.id.body);
@@ -89,3 +149,5 @@ public class MainActivity extends BaseActivity{
     }
 
 }
+
+

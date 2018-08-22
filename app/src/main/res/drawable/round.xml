@@ -3,12 +3,5 @@
 <shape
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <stroke
-        android:width="5dp"
-        android:color="@color/border" >
-    </stroke>
-
-    <solid
-        android:color="@color/white"/>
 
 </shape>

@@ -4,7 +4,6 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
 public class BaseActivity extends Activity{
@@ -15,7 +14,7 @@ public class BaseActivity extends Activity{
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getActionBar();
 
-        actionBar.hide();
+//        actionBar.hide();
 
 
     /*    View decorView = getWindow().getDecorView();
